@@ -38,6 +38,9 @@ tbCallBack = keras.callbacks.TensorBoard(log_dir='/tmp/keras_logs', write_graph=
 # Fit the model
 model.fit(X_train, Y_train, epochs=100, batch_size=50,  verbose=1, callbacks=[tbCallBack])
 
+# Save the model
+model.save('models/gotCharactersDeathPredictions.h5')
+
 # Predicting the Test set results
 Y_pred = model.predict(X_test)
 Y_pred = (Y_pred > 0.5)
