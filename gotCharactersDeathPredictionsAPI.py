@@ -46,7 +46,7 @@ def getParameters():
 def sendResponse(responseObj):
     response = flask.jsonify(responseObj)
     response.headers.add('Access-Control-Allow-Origin', '*')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,POST,OPTIONS,PUT,PATCH,DELETE')
+    response.headers.add('Access-Control-Allow-Methods', 'GET')
     response.headers.add('Access-Control-Allow-Headers', 'accept,content-type,Origin,X-Requested-With,Content-Type,access_token,Accept,Authorization,source')
     response.headers.add('Access-Control-Allow-Credentials', True)
     return response
